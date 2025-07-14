@@ -17,4 +17,21 @@ export interface Photo {
   uploadedAt: string;
   eventId: string;
   state: string;
+}
+
+export interface Admin {
+  _id: string;
+  username: string;
+  isActive: boolean;
+  createdAt: string;
+  lastLogin?: string;
+}
+
+export interface AuthContextType {
+  admin: Admin | null;
+  token: string | null;
+  login: (username: string, password: string) => Promise<boolean>;
+  logout: () => void;
+  isAuthenticated: boolean;
+  loading: boolean;
 } 
