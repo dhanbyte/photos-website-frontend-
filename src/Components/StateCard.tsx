@@ -1,8 +1,9 @@
 // src/components/StateCard.tsx
 import { Link } from "react-router-dom";
+import type { State } from "../types";
 
 type Props = {
-  state: { _id: string; name: string };
+  state: State;
   eventId: string;
 };
 

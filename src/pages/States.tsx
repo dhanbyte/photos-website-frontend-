@@ -3,10 +3,11 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import API from "../api";
 import StateCard from "../Components/StateCard";
+import type { State } from "../types";
 
 export default function States() {
   const { eventId } = useParams();
-  const [states, setStates] = useState([]);
+  const [states, setStates] = useState<State[]>([]);
 
 useEffect(() => {
   API.get(`/events/${eventId}/states`)

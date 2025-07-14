@@ -1,8 +1,9 @@
 // src/components/EventCard.tsx
 import { Link } from "react-router-dom";
+import type { Event } from "../types";
 
 type Props = {
-  event: { _id: string; name: string; date: string };
+  event: Event;
 };
 
 export default function EventCard({ event }: Props) {
